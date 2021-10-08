@@ -1,7 +1,7 @@
 # Neural_Network_Charity_Analysis
 
 ## Project Overview
-The purpose of this project was to determine the success of funding specific organizations. Alphabet Soup has collected data about the organizations that they have funded over the years, and if those organizations were successful in using that money effectively.
+The purpose of this project was to determine the success of funding specific organizations. Alphabet Soup has collected data about the organizations that they have funded over the years, and if those organizations were successful in using that money effectively. I will use this dataset to train a neural network and determine if I can accurately predict the success of funds based off of the given features.
 
 ## Results
 **Data Preprocessing**
@@ -10,7 +10,10 @@ The purpose of this project was to determine the success of funding specific org
 * The EIN and NAME columns are neither targets nor features, and were removed.
 
 **Compiling, Training, and Evaluating the Model**
-* I used five hidden layers, which all used the sigmoid activation function because the model is performing logistic regression. The layers had 256, 128, 64, 16, and 4 neurons. The output layer had one neuron and the sigmoid activation function. I ran the model with varying amounts of layers and neurons, and found this configuration resulted in the highest accuracy.
+* I used five hidden layers, which all used the sigmoid activation function because the model is performing logistic regression. The layers had 256, 128, 64, 16, and 4 neurons. The output layer had one neuron and the sigmoid activation function. I ran the model with varying amounts of layers and neurons, and found this configuration resulted in the highest accuracy. They model configuration is shown below:
+
+<img width="572" alt="Screen Shot 2021-10-07 at 5 17 02 PM" src="https://user-images.githubusercontent.com/83552696/136479037-2a756069-0802-4406-90f4-0f6306aa3d12.png">
+
 * Despite my optimization efforts, I was not able to achieve the target model performance.
 * Initially, I added columns and adjusted the number of neurons from the original model. Then, I dropped the SPECIAL_CONSIDERATIONS and ASK_AMT columns from the features, which slightly increased the performance of the model. I also adjusted the bin sizes of the rare variables in the APPLICATION_TYPE and CLASSIFICATION columns. I tried using different activation functions, like ReLU and tanh, but sigmoid got the best results. I also increased the number of epochs in the training regimen.
 
